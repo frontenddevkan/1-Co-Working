@@ -1,2 +1,2 @@
 # Community
-organisation of community proсesses
+organization of community proсesses
