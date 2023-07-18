@@ -1,2 +1,2 @@
-# Community
-organization of community proсesses
+# Community Hunter
+organization of community proсesses and notifications
