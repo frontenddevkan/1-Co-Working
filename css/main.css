@@ -19,3 +19,19 @@ header, main, footer {
 
 }
 
+.wrapper__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+}
+.logo-link {
+    display: block;
+}
+
+.wrapper__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
