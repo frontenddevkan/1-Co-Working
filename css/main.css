@@ -19,6 +19,10 @@ header, main, footer {
 
 }
 
+main {
+    flex-grow: 1;
+}
+
 /* -----------------------header ----------------------------- */
 .wrapper__head {
     display: flex;
