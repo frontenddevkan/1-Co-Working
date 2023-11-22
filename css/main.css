@@ -1,127 +1,108 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+    --pink: #C778DD;
+    --black: #1E1E1E;
+
+}
+
+
 * {
-    margin: 0;
-}
-
-body {
-    max-width: 1000px;
-    height: 1000px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
 }
 
 
-.wrapper {
-    max-width: 800px;
+html, body {
+    font-family: 'Fira Code', monospace;
+    font-size: 20px;
+    background-color: #1E1E1E;
 }
 
-header, main, footer {
-    width: 100%;
 
-}
 
-main {
-    flex-grow: 1;
-}
-
-/* -----------------------header ----------------------------- */
-.wrapper__head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-
-}
-.logo-link {
-    display: block;
-}
-
-.wrapper__text {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+a {
+    text-decoration: none;
+    color: inherit;
+    color: #ffffff;
 }
 
 .nav {
+
+    background-color: transparent;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+
 
 }
 
-.nav li {
-    margin: 0 20px;
-
-}
-
-
-.nav li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.nav li a:hover {
-    color: #000;
-}
-
-.gitnav {
+.nav-list {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    gap: 32px;
 
-.gitnav li {
-    margin: 0 20px;
-}
-
-.gitnav li a {
-    color: #000;
-    text-decoration: none;
-}
-
-.gitnav li a:hover {
-    color: #000;
-}
-
-/* ----------------------------- main ---------------------------- */
-
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-.wrapper__column {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.wrapper__column__command {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 
 
+.pink {
+    color: #C778DD;
+}
+
+.wrapper {
+    max-width: 1024px;
+    height: 61px;
+    margin: 0 auto;
 
 
-/* ----------------------------- footer ---------------------------- */
+}
+.header__logo-img {
+    width: 51px;
+    height: 51px;
+    animation: becoming 10s ease;
+    opacity: 1;
+}
+
+@keyframes becoming {
+    0% {
+       opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.header__logo {
+    margin-right: 509px;
+
+}
+.header {
+    font-size: 1,5rem;
+    padding-top: 32px;
+}
+
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.square {
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #C778DD;
+
+
+}
+
+
+
