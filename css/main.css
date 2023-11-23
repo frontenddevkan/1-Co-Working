@@ -5,7 +5,9 @@
 :root {
 
     --pink: #C778DD;
-    --black: #1E1E1E;
+    --black: #282C33;
+    --grey: #3a3a4548;
+    --white: #ffffff;
 
 }
 
@@ -15,13 +17,33 @@
 }
 
 
-html, body {
+html {
+    max-width: 1600px;
     font-family: 'Fira Code', monospace;
     font-size: 20px;
-    background-color: #1E1E1E;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+body {
+    width: 1024px;
+    background-color: var(--grey);
+
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+
 }
 
 
+main {
+    position: relative;
+}
 
 a {
     text-decoration: none;
@@ -36,9 +58,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
+
 
 .nav-list {
     display: flex;
@@ -52,16 +73,10 @@ a {
 
 
 .pink {
-    color: #C778DD;
+    color: var(--pink);
 }
 
-.wrapper {
-    max-width: 1024px;
-    height: 61px;
-    margin: 0 auto;
 
-
-}
 .header__logo-img {
     width: 51px;
     height: 51px;
@@ -84,25 +99,64 @@ a {
 
 }
 .header {
-    font-size: 1,5rem;
-    padding-top: 32px;
+    font-size: 0.875rem;
+    padding: 32px;
+}
+
+.header__wrapper {
+    width: 100%;
+
+}
+.square1 {
+    background-color: transparent;
+    border: 1px solid var(--pink);
+
 }
 
 .animation-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+
     width: 100%;
-    height: 100%;
-
-}
-.square {
-    position: absolute;
+    height: 100vh;
     background-color: transparent;
-    border: 1px solid #C778DD;
-
-
 }
 
 
 
+
+/* section INFO HELLO */
+
+
+
+
+
+.HELLO {
+    height: 100vh;
+    width: 100%;
+    color: #ffffff;
+    line-height: normal;
+
+}
+.HELLO__subtitle {
+    font-size: 0.6rem;
+    width: 350px;
+    margin-top: 10px;
+
+}
+
+.HELLO__wrapper {
+    margin: 123px 0 0 154px;
+
+}
+
+.HELLO__button {
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid var(--pink);
+    color: var(--white);
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
