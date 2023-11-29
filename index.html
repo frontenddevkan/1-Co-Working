@@ -12,8 +12,8 @@
 </head>
 
 <body>
-<div class="container">
-    <header class="header">
+<div class="container" id="container">
+    <header class="header" id="header">
         <div class="header__wrapper">
             <nav class="nav">
                 <div class="header__logo">
@@ -21,12 +21,24 @@
                 </div>
 
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a class="nav-list__link" href="./index.html"><span class="pink">#</span>home</a></li>
-                    <li class="nav-list__item"><a class="nav-list__link" href="./skills.html"><span class="pink">#</span>skills</a></li>
-                    <li class="nav-list__item"><a class="nav-list__link" href="./contacts.html"><span class="pink">#</span>contacts</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link" href="./index.html" data-scroll=""><span class="pink">#</span>home</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link" href="#skills" data-scroll="#skiils"><span class="pink">#</span>skills</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link" href="#projects"><span class="pink">#</span>projects</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link" href="#contacts"><span class="pink">#</span>contacts</a></li>
                 </ul>
             </nav>
 
+        <div class="squears squears-active">
+            <div class="squear squear1"></div>
+            <div class="squear square2"></div>
+            <div class="squear square3"></div>
+            <div class="squear square4"></div>
+            <div class="squear square5"></div>
+            <div class="squear square6"></div>
+            <div class="squear square7"></div>
+            <div class="squear square8"></div>
+            <div class="squear square9"></div>
+        </div>
         </div> <!-- div of wrapper -->
 
     </header>
@@ -41,23 +53,79 @@
                     <span class="pink">frontend developer</span></h1>
                     <p class="HELLO__subtitle">In 2023 in July I start like my own tracker roadmap for frontend to have a tamp of learning Frontend Dev. And created a channel in Telegram app <a href="https://t.me/digitalsova" target="_blank"><span class="pink">@digitalsova</span></a></p>                    <a href="https://t.me/frontendKat" target="_blank" class="HELLO__link"><button class="HELLO__button">написать в телеграм</button></a>
                 </div>
-                
+                <div class="box1 box"></div>
+                <div class="box2 box"></div>
+                <div class="box3 box"></div>
+                <div class="HELLO__photo">
+
+                    <div class="HELLO__photo__wrapper">
+                        <div class="status-icon"></div>
+                        <div class="status">Ekaterina / <a href="https://t.me/frontendKat" target="_blank" class="status__link">@frontendKat</a></div>
+
+                    </div> <!-- hello photo wrapper -->
+
+
+                </div> <!-- hello photo -->
+
 
 
             </div> <!-- wrapper div -->
         </section>
 
+    <section class="projects" id="projects">
+        <div class="projects__wrapper">
+           <div class="projects__title">
+                <h2 class=""><a class="nav-list__link" href="#projects.html"><span class="pink">#</span>projects</a></h2>
+                <div class="projects__line"></div>
+                <div class="projects__show">Показать все ~~></div>
+            </div>
 
+            <div class="projects__cards">
+                <ul class="projects__cards-list">
+                    <li class="projects__card">
+                        <img>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                        <button></button>
+                    </li>
 
+                    <li class="projects__card">
+                        <img>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                        <button></button>
+                    </li>
 
+                    <li class="projects__card">
+                        <img>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                        <button></button>
+                    </li>
 
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+    </section>
+
+    <section class="contacts" id="contacts">
+    </section>
 
     </main>
 
     <footer>
 
     </footer>
-    <script src="./main.js"></script>
 </div> <!-- div of container -->
+
+    <script src="Portfolio/js/main.js"></script>
+
 </body>
 </html>
