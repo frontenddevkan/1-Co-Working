@@ -35,6 +35,7 @@ body {
     width: 1024px;
     height: 3000px;
     background-color: var(--grey);
+    position: relative;
 
 }
 .container {
@@ -61,6 +62,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 
@@ -81,18 +83,20 @@ a {
 }
 
 
-.header__logo-img {
-    width: 51px;
-    height: 51px;
-    animation: becoming 10s ease;
-    opacity: 1;
+.header__logo__link {
+    position: fixed;
+    top: 4%;
+    left: 18.5%;
+
 
 }
-.header__logo-img-fixed {
+
+
+/* .header__logo-img-fixed {
     position: fixed;
     top: 10px;
     left: 10px;
-}
+} */
 /* @keyframes becoming {
     0% {
        opacity: 0;
@@ -103,29 +107,41 @@ a {
 } */
 
 
-.header__logo {
+/* .header__logo {
     margin-right: 30%;
 
-}
+} */
 .header {
     font-size: 0.875rem;
     padding: 32px;
 }
 
-.header.fixed {
+/* .header.fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
-}
+} */
 
 .header__wrapper {
     width: 100%;
 
 
 }
-.square1 {
+
+.squares {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background-color: rgba(0, 255, 255, 0.345);
+}
+.square {
+    width: 10px;
+    height: 10px;
     background-color: transparent;
     border: 1px solid var(--pink);
 
@@ -164,12 +180,17 @@ a {
 
 }
 
+.HELLO__title {
+    font-size: 1.5rem;
+
+}
+
 .HELLO__wrapper {
     margin: 123px 0 0 154px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.7rem;
+
 
 }
 
@@ -209,6 +230,9 @@ a {
     position: relative;
 }
 
+.status {
+    font-size: 0.7rem;
+}
 .box1 {
     width: 250px;
     height: 250px;
@@ -400,15 +424,18 @@ a {
     margin-left: 50px;
 }
 
-.projects__cards-list {
+.projects__slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    max-width: 800px;
+    flex-wrap: wrap;
+
+    column-gap: 10px;
 }
 
-.projects__card {
+slider__cards {
     width: 300px;
     height: 300px;
     border: 1px solid #ABB2BF;

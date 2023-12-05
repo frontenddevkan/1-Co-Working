@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="портфолио фронтенд-разработчика">
+    <meta name="keywords" content="IT-специалист, портфолио, фронтенд, разработчик, frontend, frontenddeveloper, frontend-developer, front-end, developer, frontend engineer, создание сайтов, разработка сайтов, верстка сайтов, верстальщик, программирование, IT, работник мечты, сайтодел, комсомолка, спортсменка, и просто красавица">
+
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
 
     <title>Portfolio</title>
 
@@ -17,7 +28,7 @@
         <div class="header__wrapper">
             <nav class="nav">
                 <div class="header__logo">
-                    <a class="header__logo-link" href="./index.html">@frontend<img class="header__logo-img" src="./img/logo.svg" alt="logo with letter K">at</a>
+                    <a class="header__logo-link" href="./index.html">@frontend &nbsp; &nbsp; at</a>
                 </div>
 
                 <ul class="nav-list">
@@ -28,23 +39,14 @@
                 </ul>
             </nav>
 
-        <div class="squears squears-active">
-            <div class="squear squear1"></div>
-            <div class="squear square2"></div>
-            <div class="squear square3"></div>
-            <div class="squear square4"></div>
-            <div class="squear square5"></div>
-            <div class="squear square6"></div>
-            <div class="squear square7"></div>
-            <div class="squear square8"></div>
-            <div class="squear square9"></div>
-        </div>
-        </div> <!-- div of wrapper -->
+
+        </div> <!-- header__wrapper -->
 
     </header>
 
     <main>
-
+        <div class="squares squares-active">
+        </div>
         <section class="HELLO">
             <div class="HELLO__wrapper">
 
@@ -80,33 +82,47 @@
                 <div class="projects__show">Показать все ~~></div>
             </div>
 
-            <div class="projects__cards">
-                <ul class="projects__cards-list">
-                    <li class="projects__card">
-                        <img>
-                        <p></p>
+            <div class="projects__slider">
+                <div class="slider__cards" id="sliderCards">
+                    <img>
+                        <p>1</p>
                         <h3></h3>
                         <p></p>
                         <button></button>
-                    </li>
+                    </div>
 
-                    <li class="projects__card">
+                    <div class="slider__cards" id="sliderCards">
                         <img>
-                        <p></p>
+                        <p>2</p>
                         <h3></h3>
                         <p></p>
                         <button></button>
-                    </li>
+                    </div>
 
-                    <li class="projects__card">
+                    <div class="slider__cards" id="sliderCards">
                         <img>
-                        <p></p>
+                        <p>3</p>
                         <h3></h3>
                         <p></p>
                         <button></button>
-                    </li>
+                    </div>
 
-                </ul>
+                    <div class="slider__cards" id="sliderCards">
+                        <img>
+                        <p>4</p>
+                        <h3></h3>
+                        <p></p>
+                        <button></button>
+                    </div>
+
+                    <div class="slider__cards" id="sliderCards">
+                        <img>
+                        <p>5</p>
+                        <h3></h3>
+                        <p></p>
+                        <button></button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -125,7 +141,6 @@
     </footer>
 </div> <!-- div of container -->
 
-    <script src="Portfolio/js/main.js"></script>
-
+    <script src="./js/main.js"></script>
 </body>
 </html>
