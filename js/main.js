@@ -88,7 +88,7 @@ function updateSquares(thirdCoordinates) {
 
 
 const movingCursor = new Image();
-movingCursor.src = 'https://github.com/frontenddevkan/Portfolio/blob/main/img/cursor.svg';
+movingCursor.src = 'https://raw.githubusercontent.com/frontenddevkan/Portfolio/main/img/cursor.svg';
 movingCursor.style.position = 'absolute';
 movingCursor.style.width = '80px';
 movingCursor.style.height = '90px';
@@ -110,7 +110,7 @@ function animateImage() {
         marginLeft = 14;
     }
 setTimeout(animateImage, 300);
-}
+};
 
 window.onload = animateImage;
 
