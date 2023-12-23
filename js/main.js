@@ -88,7 +88,7 @@ function updateSquares(thirdCoordinates) {
 
 
 const movingCursor = new Image();
-movingCursor.src = '../img/click.svg';
+movingCursor.src = 'https://github.com/frontenddevkan/Portfolio/blob/main/img/click.svg';
 movingCursor.style.position = 'absolute';
 movingCursor.style.width = '80px';
 movingCursor.style.height = '90px';
