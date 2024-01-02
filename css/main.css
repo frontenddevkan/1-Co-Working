@@ -425,24 +425,3 @@ a {
     margin-left: 50px;
 }
 
-.projects__slider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    flex-wrap: wrap;
-    column-gap: 10px;
-}
-
-.slider__cards {
-
-    width: 29%;
-    height: 15%;
-    border: 1px solid var(--pink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-}

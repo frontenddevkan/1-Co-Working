@@ -171,7 +171,7 @@ function scrollSquares() {
 //////////////////////////////////////
 const secondScrollCoordinates = [[26, 4], [26, 35], [26, 66],
 [26, 66], [26, 66],
-[26, 66], [26, 663],
+[26, 66], [26, 66],
 [26, 66], [26, 66],];
 
 function secondScrollSquares() {
@@ -182,6 +182,23 @@ function secondScrollSquares() {
     square.style.height ='15%';
     square.style.top = secondScrollCoordinates[i][0] + '%';
     square.style.left = secondScrollCoordinates[i][1] + '%';
+
+    const imageDiv1 = document.createElement('div');
+        imageDiv1.style.display = 'flex';
+        imageDiv1.style.flexDirection = 'column';
+
+        const image1 = document.createElement('img');
+        image1.src = '../img/light.jpg';
+        image1.style.width = '50%';
+        image1.style.height = '50%';
+        image1.style.backgroundRepeat = 'no-repeat';
+        image1.style.backgroundPosition = "center";
+        image1.style.backgroundSize = 'contain';
+        squares[0].appendChild(imageDiv1);
+        imageDiv1.appendChild(image1);
+        imageDiv1.style.position = 'relative';
+        const description1 = document.createElement('div');
+
 
     }
 };
