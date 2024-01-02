@@ -31,7 +31,7 @@ function createSquares(square) {
         square.style.position = 'absolute';
         square.style.top = `${coordinates[i][0]}%`;
         square.style.left = `${coordinates[i][1]}%`;
-        square.style.transition = "0.5s ease";
+        square.style.transition = "1s ease";
         document.body.appendChild(square);
 
             }
@@ -92,7 +92,7 @@ movingCursor.src = 'https://raw.githubusercontent.com/frontenddevkan/Portfolio/f
 movingCursor.style.position = 'absolute';
 movingCursor.style.width = '80px';
 movingCursor.style.height = '90px';
-movingCursor.style.transition = "margin 0.5s ease";
+movingCursor.style.transition = "margin 0.8s ease";
 
 document.body.appendChild(movingCursor);
 
@@ -102,12 +102,12 @@ let marginLeft = 16;
 function animateImage() {
     movingCursor.style.marginTop = marginTop + '%';
     movingCursor.style.marginLeft = marginLeft + '%';
-    if (marginTop === -80 && marginLeft === 14) {
+    if (marginTop === -80 && marginLeft === 16) {
         marginTop = -75;
-        marginLeft = 16;
+        marginLeft = 17;
     } else {
         marginTop = -80;
-        marginLeft = 14;
+        marginLeft = 16;
     }
 setTimeout(animateImage, 300);
 };
@@ -121,8 +121,7 @@ logoDiv.addEventListener('click', function delHand() {
     updateSquares(secondCoordinates);
     setTimeout (() => {
         updateSquares(thirdCoordinates);
-    }, 1500);
-
+    }, 1100);
 
 });
 
