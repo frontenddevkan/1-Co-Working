@@ -432,14 +432,14 @@ a {
     width: 100%;
     max-width: 800px;
     flex-wrap: wrap;
-
     column-gap: 10px;
 }
 
-slider__cards {
-    width: 300px;
-    height: 300px;
-    border: 1px solid #ABB2BF;
+.slider__cards {
+
+    width: 29%;
+    height: 15%;
+    border: 1px solid var(--pink);
     display: flex;
     align-items: center;
     justify-content: center;

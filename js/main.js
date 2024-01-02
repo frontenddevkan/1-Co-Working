@@ -1,7 +1,6 @@
 
 
 
-
 ///squares
 
 const coordinates = [[0.2, 13], [0.7, 13], [1.2, 13], [1.7, 13],
@@ -34,6 +33,7 @@ function createSquares(square) {
         square.style.transition = "1s ease";
         document.body.appendChild(square);
 
+
             }
 
     };
@@ -52,8 +52,9 @@ function updateSquares(secondCoordinates) {
         }
 }
 ///////////////////
-const thirdCoordinates = [[0.7, 17], [7.5, 13], [7.5, 27], [14, 12], [14, 28],
-[0.6, 16.5], [7, 11.5],
+const thirdCoordinates = [[0.9, 17], [7.4, 13],
+[7.5, 27.5], [14.2, 12], [14.2, 28],
+[0.5, 18], [7, 11],
 [14.5, 13], [14.5, 29],];
 
 
@@ -69,8 +70,8 @@ function updateSquares(thirdCoordinates) {
     };
 
     //////////////////////////////////////
-    const fourthCoordinates = [[0.7, 17], [7.5, 13], [7.5, 27], [14, 12], [14, 28],
-    [0.6, 16.5], [7, 11.5],
+    const fourthCoordinates = [[0.7, 16], [7.5, 18], [7.5, 27], [14, 12], [14, 28],
+    [0.6, 17], [7, 11.5],
     [14.5, 13], [14.5, 29],];
 
     function updateSquares(thirdCoordinates) {
@@ -90,26 +91,27 @@ function updateSquares(thirdCoordinates) {
 const movingCursor = new Image();
 movingCursor.src = 'https://raw.githubusercontent.com/frontenddevkan/Portfolio/f74154027f7ab15a1d2914a5b7402c6653064ae2/img/click.svg';
 movingCursor.style.position = 'absolute';
-movingCursor.style.width = '80px';
-movingCursor.style.height = '90px';
-movingCursor.style.transition = "margin 0.8s ease";
+movingCursor.style.width = '70px';
+movingCursor.style.height = '80px';
+movingCursor.style.transition = "margin 1s ease";
 
 document.body.appendChild(movingCursor);
 
-let marginTop = -75;
+let marginTop = -68;
 let marginLeft = 16;
+
 
 function animateImage() {
     movingCursor.style.marginTop = marginTop + '%';
     movingCursor.style.marginLeft = marginLeft + '%';
-    if (marginTop === -80 && marginLeft === 16) {
-        marginTop = -75;
+    if (marginTop === -76 && marginLeft === 16) {
+        marginTop = -68;
         marginLeft = 17;
     } else {
-        marginTop = -80;
+        marginTop = -76;
         marginLeft = 16;
     }
-setTimeout(animateImage, 300);
+setTimeout(animateImage, 600);
 };
 
 window.onload = animateImage;
@@ -126,5 +128,61 @@ logoDiv.addEventListener('click', function delHand() {
 });
 
 
+// скролл
 
+document.addEventListener('scroll', function() {
+    let section = document.querySelectorAll('section');
+
+    section.forEach(function(section) {
+        let rect = section.getBoundingClientRect();
+        let windowHeight = window.innerHeight;
+
+        if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+            scrollSquares();
+        }
+        if (rect.top <= windowHeight / 3 && rect.bottom >= windowHeight / 3) {
+            secondScrollSquares();
+        }
+    })
+
+})
+
+
+////////////////////////
+/// перемещение дивов по скроллу к секции
+
+//////////////////////////////////////
+const scrollCoordinates = [[25, 3], [25, 3], [25, 3], [25, 3], [25, 3],
+[25, 3], [25, 3],
+[25, 3], [25, 3],];
+
+function scrollSquares() {
+    const squares = document.querySelectorAll("[id^='square']");
+    for (let i = 0; i < squares.length; i++) {
+     const square = squares[i];
+     square.style.width = '40px';
+     square.style.height ='40px';
+              square.style.top = scrollCoordinates[i][0] + '%';
+     square.style.left = scrollCoordinates[i][1] + '%';
+
+    }
+ };
+
+//////////////////////////////////////
+const secondScrollCoordinates = [[26, 4], [26, 35], [26, 66],
+[26, 66], [26, 66],
+[26, 66], [26, 663],
+[26, 66], [26, 66],];
+
+function secondScrollSquares() {
+    const squares = document.querySelectorAll("[id^='square']");
+    for (let i = 0; i < squares.length; i++) {
+    const square = squares[i];
+    square.style.width = '29%';
+    square.style.height ='15%';
+    square.style.top = secondScrollCoordinates[i][0] + '%';
+    square.style.left = secondScrollCoordinates[i][1] + '%';
+
+    }
+};
 
