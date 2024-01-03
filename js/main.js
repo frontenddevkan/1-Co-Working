@@ -1,91 +1,8 @@
 
 
+//////////////////////////////////////
 
-///squares
-
-const coordinates = [[0.2, 13], [0.7, 13], [1.2, 13], [1.7, 13],
-[0.9, 14],
-[0.5, 15], [1.4, 15],
-[0.2, 15.9], [1.7, 15.9],
-];
-//////////////////////////////////////////////////////////
-const secondCoordinates = [[0.6, 13], [0.6, 17], [0.6, 21], [0.6, 25], [0.6, 29],
-[0.6, 33], [0.6, 37], [0.6, 41], [0.6, 45],];
-
-
-
-function createSquares(square) {
-    for (let i = 0; i < coordinates.length; i++) {
-        const square = document.createElement("div");
-
-        // генерация уникального id
-
-        const squareId = `square${i + 1}`;
-        square.setAttribute("id", squareId);
-
-        square.style.width = '15px';
-        square.style.height = '15px';
-        square.style.border = '1px solid #C778DD';
-        square.style.display = 'inline-block';
-        square.style.position = 'absolute';
-        square.style.top = `${coordinates[i][0]}%`;
-        square.style.left = `${coordinates[i][1]}%`;
-        square.style.transition = "1s ease";
-        document.body.appendChild(square);
-
-
-            }
-
-    };
-
-    createSquares();
-///////////////////
-
-function updateSquares(secondCoordinates) {
-    const squares = document.querySelectorAll("[id^='square']");
-        for (let i = 0; i < squares.length; i++) {
-            const square = squares[i];
-            square.style.width = '20px';
-            square.style.height = '20px';
-            square.style.top = secondCoordinates[i][0] + '%';
-            square.style.left = secondCoordinates[i][1] + '%';
-        }
-}
-///////////////////
-const thirdCoordinates = [[0.9, 17], [7.4, 13],
-[7.5, 27.5], [14.2, 12], [14.2, 28],
-[0.5, 18], [7, 11],
-[14.5, 13], [14.5, 29],];
-
-
-function updateSquares(thirdCoordinates) {
-       const squares = document.querySelectorAll("[id^='square']");
-       for (let i = 0; i < squares.length; i++) {
-        const square = squares[i];
-        square.style.width = '40px';
-        square.style.height ='40px';
-        square.style.top = thirdCoordinates[i][0] + '%';
-        square.style.left = thirdCoordinates[i][1] + '%';
-       }
-    };
-
-    //////////////////////////////////////
-    const fourthCoordinates = [[0.7, 16], [7.5, 18], [7.5, 27], [14, 12], [14, 28],
-    [0.6, 17], [7, 11.5],
-    [14.5, 13], [14.5, 29],];
-
-    function updateSquares(thirdCoordinates) {
-        const squares = document.querySelectorAll("[id^='square']");
-        for (let i = 0; i < squares.length; i++) {
-         const square = squares[i];
-         square.style.width = '40px';
-         square.style.height ='40px';
-                  square.style.top = thirdCoordinates[i][0] + '%';
-         square.style.left = thirdCoordinates[i][1] + '%';
-        }
-     };
-
-
+// создание и анимация руки
 
 
 const movingCursor = new Image();
@@ -123,29 +40,123 @@ logoDiv.addEventListener('click', function delHand() {
     updateSquares(secondCoordinates);
     setTimeout (() => {
         updateSquares(thirdCoordinates);
-    }, 1100);
+    }, 2000);
 
 });
+
+/////////////////////////////////////////////
+
+
+///squares
+
+const coordinates = [[0.2, 13], [0.7, 13], [1.2, 13], [1.7, 13],
+[0.9, 14],
+[0.5, 15], [1.4, 15],
+[0.2, 15.9], [1.7, 15.9],
+];
+
+
+//////////////////////////////////////////////////////////
+const secondCoordinates = [[0.6, 13], [0.6, 17], [0.6, 21], [0.6, 25], [0.6, 29],
+[0.6, 33], [0.6, 37], [0.6, 41], [0.6, 45],];
+
+
+
+function createSquares(square) {
+    for (let i = 0; i < coordinates.length; i++) {
+        const square = document.createElement("div");
+
+        // генерация уникального id
+
+        const squareId = `square${i + 1}`;
+        square.setAttribute("id", squareId);
+
+        square.style.width = '15px';
+        square.style.height = '15px';
+        square.style.border = '1px solid #C778DD';
+        square.style.display = 'inline-block';
+        square.style.position = 'absolute';
+        square.style.top = `${coordinates[i][0]}%`;
+        square.style.left = `${coordinates[i][1]}%`;
+        square.style.transition = "2s ease";
+        document.body.appendChild(square);
+
+
+            }
+
+    };
+
+    createSquares();
+///////////////////
+
+function updateSquares(secondCoordinates) {
+    const squares = document.querySelectorAll("[id^='square']");
+        for (let i = 0; i < squares.length; i++) {
+            const square = squares[i];
+            square.style.width = '20px';
+            square.style.height = '20px';
+            square.style.top = secondCoordinates[i][0] + '%';
+            square.style.left = secondCoordinates[i][1] + '%';
+        }
+}
+///////////////////
+const thirdCoordinates = [[0.9, 16], [7.4, 13],
+[7.4, 27.5], [14.2, 12], [14.2, 28],
+[0.5, 17.5], [7, 11],
+[14.8, 14], [14.8, 30],];
+
+
+function updateSquares(thirdCoordinates) {
+       const squares = document.querySelectorAll("[id^='square']");
+       for (let i = 0; i < squares.length; i++) {
+        const square = squares[i];
+        square.style.width = '40px';
+        square.style.height ='40px';
+        square.style.top = thirdCoordinates[i][0] + '%';
+        square.style.left = thirdCoordinates[i][1] + '%';
+       }
+    };
+
+    //////////////////////////////////////
+
+
+    function updateSquares(thirdCoordinates) {
+        const squares = document.querySelectorAll("[id^='square']");
+        for (let i = 0; i < squares.length; i++) {
+         const square = squares[i];
+         square.style.width = '40px';
+         square.style.height ='40px';
+                  square.style.top = thirdCoordinates[i][0] + '%';
+         square.style.left = thirdCoordinates[i][1] + '%';
+        }
+     };
+
+
+
 
 
 // скролл
 
 document.addEventListener('scroll', function() {
-    let section = document.querySelectorAll('section');
+        let section = document.querySelectorAll('section');
 
-    section.forEach(function(section) {
-        let rect = section.getBoundingClientRect();
-        let windowHeight = window.innerHeight;
+        section.forEach(function(section) {
+            let rect = section.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
 
-        if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+            if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
             scrollSquares();
-        }
-        if (rect.top <= windowHeight / 3 && rect.bottom >= windowHeight / 3) {
-            secondScrollSquares();
-        }
-    })
+            }
+            if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+                setTimeout (function() {
+                    secondScrollSquares();
+                }, 2000);
 
-})
+            }
+        })
+    });
+
+
 
 
 ////////////////////////
@@ -162,6 +173,7 @@ function scrollSquares() {
      const square = squares[i];
      square.style.width = '40px';
      square.style.height ='40px';
+     square.style.transition = '2s ease';
               square.style.top = scrollCoordinates[i][0] + '%';
      square.style.left = scrollCoordinates[i][1] + '%';
 
@@ -173,33 +185,25 @@ const secondScrollCoordinates = [[26, 4], [26, 35], [26, 66],
 [26, 66], [26, 66],
 [26, 66], [26, 66],
 [26, 66], [26, 66],];
+const projectSlider = document.getElementById('projects-slider');
+projectSlider.style.display = 'none';
 
 function secondScrollSquares() {
     const squares = document.querySelectorAll("[id^='square']");
     for (let i = 0; i < squares.length; i++) {
     const square = squares[i];
-    square.style.width = '29%';
+    square.style.width = '28%';
     square.style.height ='15%';
     square.style.top = secondScrollCoordinates[i][0] + '%';
     square.style.left = secondScrollCoordinates[i][1] + '%';
+    square.style.border = '1px solid var(--border-grey)';
 
-    const imageDiv1 = document.createElement('div');
-        imageDiv1.style.display = 'flex';
-        imageDiv1.style.flexDirection = 'column';
-
-        const image1 = document.createElement('img');
-        image1.src = '../img/light.jpg';
-        image1.style.width = '50%';
-        image1.style.height = '50%';
-        image1.style.backgroundRepeat = 'no-repeat';
-        image1.style.backgroundPosition = "center";
-        image1.style.backgroundSize = 'contain';
-        squares[0].appendChild(imageDiv1);
-        imageDiv1.appendChild(image1);
-        imageDiv1.style.position = 'relative';
-        const description1 = document.createElement('div');
-
-
-    }
+    setTimeout (function() {
+        square.style.opacity = '0';
+        square.style.transition = '3s ease';
+        projectSlider.style.display = 'block';
+    }, 4000);
+}
 };
+
 
