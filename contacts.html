@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -17,9 +18,8 @@
     <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+    <title>Contacts</title>
 
-    <title>Portfolio</title>
-    <script src="./js/audio.js"></script>
 </head>
 
 <body>
@@ -28,14 +28,15 @@
         <div class="header__wrapper">
             <nav class="nav">
                 <div class="header__logo">
-                    <span class="header__logo-link">@frontend &nbsp; &nbsp; at</span>
+                    <a href="https://t.me/frontendkat" style="font-size: 1rem"><span class="header__logo-link">@frontend<span class="pink" style="font-size: 1.5rem">K</span>at</span></a>
                 </div>
 
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a class="nav-list__link here" href="./index.html" data-scroll=""><span class="pink">#</span>home</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link" href="./index.html" data-scroll=""><span class="pink">#</span>home</a></li>
                     <li class="nav-list__item"><a class="nav-list__link" href="#skills" data-scroll="#skiils"><span class="pink">#</span>skills</a></li>
                     <li class="nav-list__item"><a class="nav-list__link" href="#projects"><span class="pink">#</span>projects</a></li>
-                    <li class="nav-list__item"><a class="nav-list__link" href="./contacts.html"><span class="pink">#</span>contacts</a></li>
+                    <li class="nav-list__item"><a class="nav-list__link here" href="./contacts.html"><span class="pink">#</span>contacts</a></li>
+
                 </ul>
             </nav>
 
@@ -45,24 +46,20 @@
     </header>
 
     <main>
-        <div class="squares squares-active">
+        <div class="squares ">
         </div>
-        <section class="HELLO">
-            <div class="HELLO__wrapper">
+        <section class="contacts-HELLO">
+            <div class="contacts-HELLO__wrapper">
 
-                <div class="HELLO__text">
-                    <h1 class="HELLO__title">Portfolio<br>
-                    <span class="pink">frontend developer</span></h1>
-                    <p class="HELLO__subtitle">In 2023 in July I had start like my own tracker roadmap for frontend to have a tamp of learning Frontend Dev. And created a channel in Telegram app <a href="https://t.me/digitalsova" target="_blank"><span class="pink">@digitalsova</span></a></p>                    <a href="https://t.me/frontendKat" target="_blank" class="HELLO__link">
-                        <button class="HELLO__button">написать в телеграм</button></a>
+                <div class="contacts-HELLO__text">
+                    <h1 class="contacts-HELLO__title" style="text-decoration: underline"><span class="pink">#</span>Contacts</h1>
+                    <br>
+                    <span class="pink contacts-span" style="font-size: 1rem">frontend developer</span>
+                    <h2 class="write-me">
+                        <a class="telegram-link" style="font-size: 1rem"href="https://t.me/frontendkat">
+                            <span class="pink" >@</span>frontendKat</a>
+                    </h2>
                 </div>
-                <div class="box1 box"></div>
-                <div class="box2 box"></div>
-                <div class="box3 box"></div>
-
-
-
-
 
                 <div class="HELLO__photo">
 
@@ -80,42 +77,25 @@
             </div> <!-- wrapper div -->
         </section>
 
-    <section class="projects" id="projects">
-        <div class="projects__wrapper">
-           <div class="projects__title">
-                <h2 class="">
-                    <a class="nav-list__link" href="#projects.html">
-                        <span class="pink">#</span>projects</a>
-                </h2>
-                <div class="projects__line"></div>
-                <div class="projects__show">Показать все ~~></div>
-            </div>
+    <section class="send" id="send">
+        <div class="contacts__wrapper">
+           <h3 class="contacts__title">Форма для связи</h3>
+           <div class="pink-line"></div>
+           <form method="post" action="#" id="post" >
+                <input type="text" name="input_name" placeholder="Представьтесь, пожалуйста, кто Вы?">
+                <textarea name="post_text" placeholder="Напишите, пожалуйста, суть Вашего вопроcа"></textarea>
+                <input type="submit" class="button-send button" value="Отправить">
 
-            <div class="projects__slider" id="projects-slider">
-                <div class="projects__card1"></div>
-                <div class="projects__card2"></div>
-                <div class="projects__card3"></div>
-            </div>
+           </form>
 
         </div>
 
-    </section>
 
-    <section class="skills" id="skills">
-    </section>
-
-    <section class="contacts" id="contacts">
-    </section>
-
-    </main>
 
     <footer>
 
     </footer>
 </div> <!-- div of container -->
 
-    <script src="./js/main.js"></script>
-
-    <script src="./js/slider.js"></script>
 </body>
 </html>

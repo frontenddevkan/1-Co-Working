@@ -200,7 +200,7 @@ function secondScrollSquares() {
 
     setTimeout (function() {
         square.style.opacity = '0';
-        square.style.transition = '3s ease';
+        square.style.transition = '3s ease linear';
         projectSlider.style.display = 'block';
     }, 4000);
 }
