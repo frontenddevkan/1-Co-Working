@@ -51,7 +51,7 @@ main {
 
 a {
     text-decoration: none;
-    color: inherit;
+    padding: 5px;
     color: #ffffff;
 }
 
@@ -78,6 +78,7 @@ a {
 
 
 
+
 .pink {
     color: var(--pink);
 }
@@ -92,25 +93,6 @@ a {
 }
 
 
-/* .header__logo-img-fixed {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-} */
-/* @keyframes becoming {
-    0% {
-       opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-} */
-
-
-/* .header__logo {
-    margin-right: 30%;
-
-} */
 .header {
     font-size: 0.875rem;
     padding: 32px;
@@ -346,7 +328,7 @@ a {
 
 }
 
-.HELLO__button:hover, a:hover, .button-send:hover, .here {
+.HELLO__button:hover, .button-send:hover, .here, .header a:hover {
     background-color: #c778dd63;
     cursor: pointer;
     border:rgba(255, 255, 255, 0.603) 1px solid;
