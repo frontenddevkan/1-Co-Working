@@ -67,12 +67,12 @@ a {
 
 
 .nav-list {
-    width: 50%;
+    width: 72%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 32px;
+    gap: 20px;
 
 }
 
@@ -202,7 +202,7 @@ a {
 
 .HELLO__photo {
     background-image: url(../img/photo.jpg);
-    filter: greyscale(50%);
+
     width: 250px;
     height: 250px;
     background-size: cover;
@@ -351,46 +351,20 @@ a {
     cursor: pointer;
     border:rgba(255, 255, 255, 0.603) 1px solid;
     border-radius: 6px;
-    padding: 5px;
+
     transition: all 600ms ease;
 }
 
 
 .squares {
     display: none;
-
 }
-
-
-
-@keyframes transform {
-    0% {
-
-
-    }
-
-    50% {
-        width: 5000px;
-        heigth: 5000px;
-    }
-
-    100% {
-        width: 51px;
-        height: 51px;
-    }
-}
-
-
-
-
 
 
 
 
 
 /*------------------------- projects */
-
-
 
 
 

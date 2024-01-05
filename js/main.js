@@ -1,6 +1,11 @@
 
 
-//////////////////////////////////////
+// мобильная версия. отключаем создание дивов
+
+function ifMobile(){
+    if (window.matchMedia("(max-width: 767px)").matches) {
+return;
+}
 
 // создание и анимация руки
 
@@ -206,4 +211,6 @@ function secondScrollSquares() {
 }
 };
 
+}
+ifMobile();
 
