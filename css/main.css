@@ -67,12 +67,12 @@ a {
 
 
 .nav-list {
-    width: 72%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
 
 }
 
@@ -89,9 +89,7 @@ a {
     top: 4%;
     left: 18.5%;
 
-
 }
-
 
 .header {
     font-size: 0.875rem;
@@ -388,36 +386,48 @@ a {
     flex-direction: row;
     justify-content: center;
     background-color: transparent;
+    overflow: hidden;
+
 }
 
 .projects__card1 {
+    width: 14.4em;
+    height: 22.5em;
     position: absolute;
     top: 97.5%;
     left: 0%;
-    width: 14.4em;
-    height: 22.5em;
     border: 1px solid var(--border-grey);
 
 }
 
 .projects__card2 {
+    width: 14.4em;
+    height: 22.5em;
     position: absolute;
     top: 97.5%;
     left: 34.5%;
-    width: 14.4em;
-    height: 22.5em;
     border: 1px solid var(--pink);
 }
 
 .projects__card3 {
+    width: 14.4em;
+    height: 22.5em;
     position: absolute;
     top: 97.5%;
     left: 69%;
-    width: 14.4em;
-    height: 22.5em;
     border: 1px solid var(--border-grey);
 }
 
+.card {
+    width: 14.4em;
+    height: 22.5em;
+    position: absolute;
+    top: 97.5%;
+    left: 69%;
+    border: 1px solid var(--border-grey);
+    display: none;
+
+}
 /* ////////////   contacts /////////////////// */
 
 
@@ -514,4 +524,10 @@ a {
 
 h3 {
     font-size: 0.9rem;
+}
+
+.telegram-link:hover {
+    color: var(--pink);
+    cursor: pointer;
+    text-decoration: underline;
 }
