@@ -2,8 +2,8 @@
 
 // мобильная версия. отключаем создание дивов
 
-function ifMobile(){
-    if (window.matchMedia("(max-width: 767px)").matches) {
+function ifMobile() {
+    if (window.matchMedia("(max-width: 700px)").matches) {
 return;
 }
 
@@ -85,8 +85,6 @@ function createSquares(square) {
         square.style.left = `${coordinates[i][1]}%`;
         square.style.transition = "2s ease";
         document.body.appendChild(square);
-
-
             }
 
     };
@@ -179,7 +177,7 @@ function scrollSquares() {
      square.style.width = '40px';
      square.style.height ='40px';
      square.style.transition = '2s ease';
-              square.style.top = scrollCoordinates[i][0] + '%';
+            square.style.top = scrollCoordinates[i][0] + '%';
      square.style.left = scrollCoordinates[i][1] + '%';
 
     }
@@ -190,7 +188,8 @@ const secondScrollCoordinates = [[26, 4], [26, 35], [26, 66],
 [26, 66], [26, 66],
 [26, 66], [26, 66],
 [26, 66], [26, 66],];
-const projectSlider = document.getElementById('projects-slider');
+
+let projectSlider = document.getElementById('projects-slider');
 projectSlider.style.display = 'none';
 
 function secondScrollSquares() {
@@ -204,13 +203,15 @@ function secondScrollSquares() {
     square.style.border = '1px solid var(--border-grey)';
 
     setTimeout (function() {
-        square.style.opacity = '0';
-        square.style.transition = '3s ease linear';
         projectSlider.style.display = 'block';
+        square.style.display = 'none';
+        square.style.transition = '3s ease linear';
+        
     }, 4000);
 }
 };
 
 }
+
 ifMobile();
 

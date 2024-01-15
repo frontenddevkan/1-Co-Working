@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./css/adaptive-mobile.css">
 
     <title>Portfolio</title>
-    <script src="./js/audio.js"></script>
 </head>
 
 <body>
@@ -85,34 +84,44 @@
                         <span class="pink">#</span>projects</a>
                 </h2>
                 <div class="projects__line"></div>
-                <div class="projects__show">Показать все ~~></div>
+                
             </div>
 
             <div class="projects__slider" id="projects-slider">
-                <div class="projects__card1">
-                    <div class="projects__img">
-                        <img src="./img/light.jpg" alt="проект"> <!-- img -->
-                        <img src="./img/dark.jpg" alt="проект"> <!-- img -->
+                <button class="prevBtn" id="prevBtn"></button>
+             
+                <div class="projects__slider-wrapper" id="slider-wrapper">
+                  
+                    <div class="projects__card1 ">
+                        <div class="projects__img">
+                            <img src="./img/light.jpg" alt="проект"> <!-- img -->
+                            <img src="./img/dark.jpg" alt="проект"> <!-- img -->
+                        </div>
+                        <h3>Многостраничный сайт</h3>
+                        <p>Использованы html, css, анимации, адаптивный дизайн, переключатель тем со светлой на темную.</p>
+
                     </div>
 
-                </div>
-
-                <div class="projects__card2">
-                    <div class="projects__img">
-                        <img src="./img/projects1.jpg" alt="проект"> <!-- img -->
+                    <div class="projects__card2 ">
+                        <div class="projects__img">
+                         <img src="./img/projects1.jpg" alt="проект"> <!-- img -->
+                        </div>
+                        <h3>Портфолио</h3>
+                        <p>Задача Портфолио была в том, чтобы максимально уйти от анимаций на css на javascript. А также сделать более интерактивным сайт, обойдясь нативным js.</p>
                     </div>
-                </div>
 
-                <div class="projects__card3">
-                    <div class="projects__img">
-                        <img src="./img/projects2.jpg" alt="проект"> <!-- img -->
+                    <div class="projects__card3 ">
+                        <div class="projects__img">
+                            <img src="./img/projects2.jpg" alt="проект"> <!-- img -->
+                        </div>
                     </div>
-                </div>
-                <!-- <div class="projects__card3"></div>
-                <div class="projects__card3"></div>
-                <div class="projects__card3"></div>
-                <div class="projects__card3"></div>
-                <div class="projects__card3"></div> -->
+                    <!-- <div class="projects__card3"></div>
+                 <div class="projects__card3"></div>
+                 <div class="projects__card3"></div>
+                 <div class="projects__card3"></div>
+                 <div class="projects__card3"></div> -->
+                </div> <!-- wrapper -->
+                <button class="nextBtn" id="nextBtn"></button>
 
             </div>
 
