@@ -1,26 +1,8 @@
-
-
 // мобильная версия. отключаем создание дивов
 
-function ifMobile() {
-    if (window.matchMedia("(max-width: 700px)").matches) {
-return;
-}
+
 
 // создание и анимация руки
-
-
-const movingCursor = new Image();
-movingCursor.src = 'https://raw.githubusercontent.com/frontenddevkan/Portfolio/f74154027f7ab15a1d2914a5b7402c6653064ae2/img/click.svg';
-movingCursor.style.position = 'absolute';
-movingCursor.style.width = '70px';
-movingCursor.style.height = '80px';
-movingCursor.style.transition = "margin 1s ease";
-
-document.body.appendChild(movingCursor);
-
-let marginTop = -68;
-let marginLeft = 16;
 
 
 function animateImage() {
@@ -36,18 +18,15 @@ function animateImage() {
 setTimeout(animateImage, 600);
 };
 
-window.onload = animateImage;
+window.onload = function () {
+    setTimeout (function() {
+        updateSquares(secondCoordinates);
+        setTimeout (() => {
+         updateSquares(thirdCoordinates);
+        }, 2000);
+}, 3000);
+}
 
-let  logoDiv = document.querySelector('.header, [id^="square"]');
-logoDiv.addEventListener('click', function delHand() {
-    movingCursor.style.opacity = 0;
-    isdelHandCalled = true;
-    updateSquares(secondCoordinates);
-    setTimeout (() => {
-        updateSquares(thirdCoordinates);
-    }, 2000);
-
-});
 
 /////////////////////////////////////////////
 
@@ -184,34 +163,50 @@ function scrollSquares() {
  };
 
 //////////////////////////////////////
-const secondScrollCoordinates = [[26, 4], [26, 35], [26, 66],
-[26, 66], [26, 66],
-[26, 66], [26, 66],
-[26, 66], [26, 66],];
+const secondScrollCoordinates = [[25, 5], 
+[27, 11], 
+[29, 17],
+[31, 23], 
+[27, 11], [27, 11], 
+[27, 11],
+[27, 11], [27, 11],];
 
-let projectSlider = document.getElementById('projects-slider');
-projectSlider.style.display = 'none';
+const sliderImages = ['../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg',];
 
 function secondScrollSquares() {
     const squares = document.querySelectorAll("[id^='square']");
     for (let i = 0; i < squares.length; i++) {
     const square = squares[i];
-    square.style.width = '28%';
+    square.style.width = '54%';
     square.style.height ='15%';
     square.style.top = secondScrollCoordinates[i][0] + '%';
     square.style.left = secondScrollCoordinates[i][1] + '%';
     square.style.border = '1px solid var(--border-grey)';
+        setTimeout (function() {
+            let projectsSlider = document.getElementById("[id^='square']");
+            let slide = document.createElement('div');
+            let slideImg = document.createElement('img');
+            let slideText = document.createElement('p');
+                for (let i = 0; i < sliderImages.length; i++) {
+                slideImg.src = sliderImages[i];
+                }
+                slideImg.alt = 'Картинка проекта';
+                slideImg.style.width = '100%';
+                slideImg.style.height = '50%';
+                slideImg.style.objectFit = 'cover';
+                slideImg.style.objectPosition = 'center';
+                
+                slide.appendChild(slideImg);
+                slide.appendChild(slideText);
+                slideText.textContent = 'javascript';
+                projectsSlider.appendChild(slide);
 
-    setTimeout (function() {
-        projectSlider.style.display = 'block';
-        square.style.display = 'none';
-        square.style.transition = '3s ease linear';
-        
-    }, 4000);
+
+            }, 3000);
+
+
 }
 };
 
-}
 
-ifMobile();
 
