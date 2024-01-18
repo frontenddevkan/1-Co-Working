@@ -165,48 +165,51 @@ function scrollSquares() {
 //////////////////////////////////////
 const secondScrollCoordinates = [[25, 5], 
 [27, 11], 
-[29, 17],
-[31, 23], 
 [27, 11], [27, 11], 
 [27, 11],
-[27, 11], [27, 11],];
+[27, 11], [27, 11], [29, 17],
+[31, 23], ];
 
-const sliderImages = ['../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg', '../img/light.jpg', '../img/dark.jpg',];
+const sliderImages = ['../img/light.jpg', '../img/dark.jpg'];
 
+const sliderTextArray = ['html, css, анимации', 'html, css, адаптивный дизайн', 'html, css, анимации', 'html, css, адаптивный дизайн', 'html, css, анимации'];
 function secondScrollSquares() {
     const squares = document.querySelectorAll("[id^='square']");
-    for (let i = 0; i < squares.length; i++) {
+            
+            for (let i = 0; i < squares.length; i++) {
     const square = squares[i];
     square.style.width = '54%';
     square.style.height ='15%';
     square.style.top = secondScrollCoordinates[i][0] + '%';
     square.style.left = secondScrollCoordinates[i][1] + '%';
     square.style.border = '1px solid var(--border-grey)';
-        setTimeout (function() {
-            let projectsSlider = document.getElementById("[id^='square']");
-            let slide = document.createElement('div');
-            let slideImg = document.createElement('img');
-            let slideText = document.createElement('p');
-                for (let i = 0; i < sliderImages.length; i++) {
-                slideImg.src = sliderImages[i];
-                }
-                slideImg.alt = 'Картинка проекта';
-                slideImg.style.width = '100%';
-                slideImg.style.height = '50%';
-                slideImg.style.objectFit = 'cover';
-                slideImg.style.objectPosition = 'center';
-                
-                slide.appendChild(slideImg);
-                slide.appendChild(slideText);
-                slideText.textContent = 'javascript';
-                projectsSlider.appendChild(slide);
+        
+        }
+    };
+    
+    setTimeout (function createElements () {
+        let slide1 = document.createElement('div');
+        let slideImg1 = document.createElement('img');
+        let slideText1 = document.createElement('p');
+                              
 
+            slide1.appendChild(slideImg1);
+            slide1.appendChild(slideText1);
+            let square1 = document.getElementById('square1');
+            square1.appendChild(slide1);
 
-            }, 3000);
+            slideImg1.src = sliderImages[0];
+            slideText1.textContent = sliderTextArray[0];
+            slideImg1.alt = 'Картинка проекта';
+            slideImg1.style.width = '100%';
+            slideImg1.style.height = '50%';
+            slideImg1.style.objectFit = 'cover';
+            slideImg1.style.objectPosition = 'center';  
+    }, 3000);
+    
 
+    // setTimeout (function createElements() {
 
-}
-};
+                                 
 
-
-
+    //     }, 3000);
