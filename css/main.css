@@ -367,7 +367,7 @@ a {
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 84px;
 
 }
 
@@ -387,17 +387,26 @@ a {
 
 .projects__slider-wrapper {
     
-    max-width: 700px;
-    border: #C778DD 1px solid;
-    
+    width: 100%;
+    /* border: var(--border-grey) 1px solid; */
+        
     display: flex;
+    justify-content: space-around;
     
 
 }
 
+.nextBtn, .prevBtn {
+   /* width: 4rem;
+   height: 4rem; */
+    background-color: transparent;
+    border: none;
+        
+}
+
 .projects__card1 {
-    width: 100px;
-    height: 200px; 
+    width: 10rem;
+    height: 20rem; 
     border: 1px solid var(--border-grey);
     display: flex;
     flex-direction: column;
@@ -460,15 +469,6 @@ a {
 
 
 
-.prevBtn, .nextBtn {
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--border-grey);
-    
-    color: var(--white);
-    background-color: transparent;
-
-}
 
 /* ////////////   contacts /////////////////// */
 
