@@ -85,23 +85,45 @@
             </div>
 
             <div class="projects__slider" id="projects-slider">
+
                 <button class="prevBtn" id="prevBtn"><img class="prev-button-img" src="./img/buttonPrev.svg" alt="переключатель на предыдущий проект"></button> 
                  
                 <div class="projects__slider-wrapper" id="slider-wrapper">
                   
-                    <div class="projects__card1 ">
+                    <div class="projects__card1 card-visible">
                          <div class="projects__img">
-                            <img class= "light" src="./img/light.jpg" alt="проект"> 
-                            <img class="dark" src="./img/dark.jpg" alt="проект"> 
+                            <img class= "light" src="./img/light.jpg" alt="проект светлой темы"> 
+                            <img class="dark" src="./img/dark.jpg" alt="проект темной темы"> 
                         </div>
-                        <p class="projects__stack">html, css, анимация на js, адаптивный дизайн, переключатель тем со светлой на темную.</p>
+                        <div class="projects__stack">
+                            html, css, анимация на js, адаптивный дизайн, переключатель тем со светлой на темную.
+                        </div>
                         <div class="projects__card-title">
-                            <h3>Многостраничный сайт</h3>
-                            <button>
+                           <h3>Многостраничный сайт</h3>
+                            <p>Многостраничный сайт гомеопата на заказ.</p> 
+                            </div>
+                            <button class="projects__button">
                                 <a class="projects__link" href="https://frontenddevkan.github.io/..." target="_blank">Перейти</a>
                             </button>
-                        </div>
+                
                     </div>
+
+                    <div class="projects__card2 card-hidden">
+                        <div class="projects__img">
+                           <img class= "card2" src="./img/light.jpg" alt=""> 
+                        </div>
+                       <div class="projects__stack">
+                           landing page
+                       </div>
+                       <div class="projects__card-title">
+                          <h3>Лендинг цветочного магазина</h3>
+                           <p>Лендинг по макету из фигмы на учебном проекте школы RSSchool</p> 
+                        </div>
+                        <button>
+                               <a class="projects__link" href="https://frontenddevkan.github.io/..." target="_blank">Перейти</a>
+                        </button>
+                    </div>
+
 
                                        
                 </div>  <!--closed slider-wrapper-->
